@@ -13,3 +13,9 @@ FROM employees ;
 SELECT replace(job_id,'ACCOUNT','ACT')
 FROM employees ; 
 
+-- employees 테이블에서 job_id의 데이터 값에 대해 
+-- 왼쪽 방향부터 F 문자를 만나면 삭제
+-- 그리고 오른쪽 방향부터 T 문자를 만나면 삭제한 job_id 출력
+SELECT RTRIM(LTRIM(job_id,'F'),'T')
+FROM employees ; 
+
